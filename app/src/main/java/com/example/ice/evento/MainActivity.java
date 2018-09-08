@@ -45,6 +45,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent,REQUEST_SERVIDOR);
             }
         });
+        btnExterno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ExternoActivity.class);
+                startActivityForResult(intent,REQUEST_SERVIDOR);
+            }
+        });
 
     }
 
@@ -64,8 +71,10 @@ public class MainActivity extends AppCompatActivity {
             txtMensagem.setText("Olá "+ nome+" de SIAPE: " + siape);
         }
         else if(requestCode == MainActivity.REQUEST_EXTERNO && resultCode == Activity.RESULT_OK && data != null){
-
-
+            Bundle bundleResultado = data.getExtras();
+            String nome = bundleResultado.getString(MainActivity.EXTERNO_NOME);
+            String email = bundleResultado.getString(MainActivity.EXTERNO_EMAIL);
+            txtMensagem.setText("Olá "+ nome+" de EMAIL: " + email);
         }
     }
 }

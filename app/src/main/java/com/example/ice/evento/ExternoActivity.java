@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class ExternoActivity extends AppCompatActivity {
     EditText edtNome;
@@ -30,5 +31,48 @@ public class ExternoActivity extends AppCompatActivity {
                 finish();
             }
         });
+        Toast.makeText(getApplicationContext(), "externo onCreate()",Toast.LENGTH_SHORT).show();
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Toast.makeText(getApplicationContext(), "externo onStart()",Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast.makeText(getApplicationContext(), "externo onResume()",Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Toast.makeText(getApplicationContext(), "externo onPause()",Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Toast.makeText(getApplicationContext(), "externo onStop()",Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Toast.makeText(getApplicationContext(), "externo onRestart()",Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Toast.makeText(getApplicationContext(), "externo onDestroy()",Toast.LENGTH_SHORT).show();
+
+    }
+
 }
