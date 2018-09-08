@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     public static final String SERVIDOR_NOME = "Nome Servidor";
     public static final String SERVIDOR_SIAPE = "SIAPE Servidor";
     private static final int REQUEST_EXTERNO = 3;
+    public static final String EXTERNO_NOME = "Nome Externo";
+    public static final String EXTERNO_EMAIL = "Email Externo";
     private TextView txtMensagem;
     private Button btnAluno;
     private Button btnServidor;
